@@ -15,13 +15,15 @@
         }
         public static void Main()
         {
+            //CLASS USER TEST
+            /*
             user User1 = new user("Grisha1", "mjk71@mail.ru", "yasosubibu");
             user User2 = new user("Grisha2", "mjk71@mail.ru", "yasosubibu");
             user User3 = new user("Grisha3", "mjk71@mail.ru", "yasosubibu");
             user User4 = new user("Grisha4", "mjk71@mail.ru", "yasosubibu");
             user User5 = new user("Grisha5", "mjk71@mail.ru", "yasosubibu");
 
-            Console.WriteLine("Was created users: " + user.CountOfUsers);
+            Console.WriteLine("Was created users: " + user.Id);
 
             Console.WriteLine("Original pass:" + User1.Password);
             User1.ChangePassword();
@@ -30,6 +32,8 @@
             Console.WriteLine("New original pass: " + User1.Password);
 
             User1.Show();
+
+            //REF, OUT, PARAMS TEST
 
             int a = 3;
             int b = 2;
@@ -43,6 +47,24 @@
             int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             param(ref sum, values);
             Console.WriteLine("'sum' after = " + sum);
+            */
+
+            //STATIC CLASS TEST
+
+            Console.WriteLine("static Developer class TEST\nEnter the current year: ");
+
+            int input;
+            bool result = int.TryParse(Console.ReadLine(), out input);
+            if (result)
+            {
+                Console.WriteLine("Success! current year = " + input);
+                Console.WriteLine(Developer.get_age(input));
+            }
+            else
+            {
+                Console.WriteLine("Invalid year! Shuting down.");
+            }
+            
         }
     }
 }

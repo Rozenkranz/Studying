@@ -1,4 +1,4 @@
-﻿namespace Study1
+﻿namespace MyUser
 {
     class user
     {
@@ -7,10 +7,7 @@
         private string email;
         private string password;
 
-        static public int Id
-        {
-            get { return id; }
-        }
+        static public int Id { get { return id; } }
 
         public string Name
         {
@@ -30,7 +27,8 @@
             set { if (password != null) password = value; }
         }
 
-        public void Show() { Console.WriteLine("\n   ID = " + Id + "\n   Name = " + Name + "\n   Email = " + Email + "\n   Password = " + Password); }
+        public void Show() =>
+            Console.WriteLine("\n   ID = " + Id + "\n   Name = " + Name + "\n   Email = " + Email + "\n   Password = " + Password); 
 
         public void ChangePassword()
         {
@@ -43,9 +41,11 @@
             Password = _password;
         }
 
-        public void ChangePassword(string _password) { Password = _password; }
+        public void ChangePassword(string _password) =>
+             Password = _password; 
 
-        static user() { id = 0; }
+        static user() =>
+            id = 0;
 
         public user(string name, string email, string password)
         {

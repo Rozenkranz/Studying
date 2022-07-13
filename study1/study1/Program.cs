@@ -1,4 +1,7 @@
-﻿namespace Study1
+﻿using MyDeveloper;
+using MyUser;
+
+namespace Study1
 {
     class Program
     {
@@ -13,9 +16,13 @@
                 sum += i;
             return sum;
         }
+
         public static void Main()
         {
-            //CLASS USER TEST
+            //                                              MAIN ARGS
+            string[] args = Environment.GetCommandLineArgs();
+            Console.WriteLine($"Executable file is:  {args[0]}");
+            //                                              CLASS USER TEST
             /*
             user User1 = new user("Grisha1", "mjk71@mail.ru", "yasosubibu");
             user User2 = new user("Grisha2", "mjk71@mail.ru", "yasosubibu");
@@ -33,7 +40,7 @@
 
             User1.Show();
 
-            //REF, OUT, PARAMS TEST
+            //                                              REF, OUT, PARAMS TEST
 
             int a = 3;
             int b = 2;
@@ -49,7 +56,7 @@
             Console.WriteLine("'sum' after = " + sum);
             */
 
-            //STATIC CLASS TEST
+            //                                              STATIC CLASS TEST
 
             Console.WriteLine("static Developer class TEST\nEnter the current year: ");
 
@@ -64,7 +71,12 @@
             {
                 Console.WriteLine("Invalid year! Shuting down.");
             }
+
+            //                                              RECURSION TEST
+            Console.WriteLine($"Factorial 10 is :{Developer.factorial(10)}");
+
             
+
         }
     }
 }

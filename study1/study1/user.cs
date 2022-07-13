@@ -1,6 +1,4 @@
-﻿
-
-namespace Study1
+﻿namespace Study1
 {
     class user
     {
@@ -15,7 +13,6 @@ namespace Study1
         {
             get
             {
-                
                 return id;
             }
             set { id = Create_ID(); }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Study
 {
-    class birthdayDate
+    class birthdayDate // Класс работающий с датой рождения
     {
         int year;
         int month;
         int day;
+        static int objectNubbers = 0; // Статичная переменная для счёта обьектов
 
         enum Months { January , February, March, April, May, June, July, August, September, October, November, December}
         public int Year
@@ -43,7 +44,7 @@ namespace Study
             Console.WriteLine("Congratulations you are: " + Zodiacs[monthZod] );
         }
 
-        public birthdayDate(int year, int month, int day)
+        public birthdayDate(int year, int month, int day) //конструктор по умолчанию
         {
             this.year = year;
             this.month = month;
@@ -90,6 +91,13 @@ namespace Study
                     Console.WriteLine("You are bullshit\n Try again. Enter the day: ");               
             } while (!result);
 
+            objectNubbers++;
         }
+
+        public int GetObjectNumbers()
+        {
+            return objectNubbers;
+        }
+        
     }
 }

@@ -9,6 +9,7 @@ namespace Study
             birthdayDate birthday = new birthdayDate(); // Обьявление обьекта класса
             birthday.GetInfo();
             Console.WriteLine("Number of user - " + birthday.GetObjectNumbers());
+            
 
             birthdayDate birthday1 = new birthdayDate(); // Обьявление обьекта класса
             birthday1.GetInfo();
@@ -17,6 +18,10 @@ namespace Study
             birthdayDate birthday2 = new birthdayDate(); // Обьявление обьекта класса
             birthday2.GetInfo();
             Console.WriteLine("Number of user - " + birthday2.GetObjectNumbers());
+
+            Future future = new Future();
+            future.LuckyChance(birthday.Month);
+
         }
     }
 }

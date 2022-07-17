@@ -23,7 +23,7 @@ namespace Study
             set { starNumber = value; }
         }
         
-        public void LuckyChance(int Month)
+        public virtual void LuckyChance(int Month)
         {
             Random rnd = new Random(); //Обьект для генерации чисел
             starNumber = rnd.Next(1,10);

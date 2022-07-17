@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Study
 {
-    internal class Class1
+    class Now : Future
     {
+        public override void LuckyChance(int Day)
+        {
+            if (Day == 12)
+                Console.WriteLine("WOW YOU ARE SO LUCKY");
+        }
     }
 }
